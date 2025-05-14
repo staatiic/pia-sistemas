@@ -28,8 +28,8 @@ Este es un sistema web avanzado que proporciona recomendaciones personalizadas t
 
 1. Clonar el repositorio:
 ```bash
-git clone [URL_DEL_REPOSITORIO]
-cd pia-sistemass
+git clone https://github.com/staatiic/pia-sistemas.git
+cd pia-sistemas
 ```
 
 2. Crear un entorno virtual (recomendado):
@@ -87,7 +87,7 @@ http://localhost:5000
 ## Estructura del Proyecto
 
 ```
-pia-sistemass/
+pia-sistemas/
 ├── app.py                 # Aplicación principal Flask
 ├── train_model.py         # Entrenamiento del modelo de películas
 ├── train_music_model.py   # Entrenamiento del modelo de música
@@ -113,5 +113,3 @@ pia-sistemass/
 2. Calcula similitud entre álbumes
 3. Genera recomendaciones personalizadas
 4. Muestra información detallada de cada álbum
-
-
