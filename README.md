@@ -1,82 +1,82 @@
-# Sistema de Recomendación de Películas y Música
+# Movie and Music Recommendation System
 
-Este es un sistema web avanzado que proporciona recomendaciones personalizadas tanto para películas como para música, utilizando técnicas de machine learning y procesamiento de lenguaje natural.
+This is an advanced web system that provides personalized recommendations for both movies and music, using machine learning techniques and natural language processing.
 
-## Características Principales
+## Main Features
 
-### Sistema de Recomendación de Películas
-- Recomendaciones basadas en similitud de contenido (coseno)
-- Agrupamiento de películas similares usando KMeans
-- Visualización de detalles completos de películas
-- Interfaz moderna y responsiva
-- Sistema de puntuación y votos integrado
+### Movie Recommendation System
+- Content-based recommendations using cosine similarity
+- Movie clustering using KMeans
+- Complete movie details visualization
+- Modern and responsive interface
+- Integrated rating and voting system
 
-### Sistema de Recomendación de Música
-- Recomendaciones de álbumes basadas en similitud
-- Visualización de artistas y géneros
-- Sistema de calificación integrado
-- Imágenes de portadas de álbumes
-- Descripciones detalladas de álbumes
+### Music Recommendation System
+- Album similarity-based recommendations
+- Artist and genre visualization
+- Integrated rating system
+- Album cover images
+- Detailed album descriptions
 
-## Requisitos del Sistema
+## System Requirements
 
-- Python 3.8 o superior
-- pip (gestor de paquetes de Python)
-- Conexión a internet para cargar imágenes y datos
+- Python 3.8 or higher
+- pip (Python package manager)
+- Internet connection for loading images and data
 
-## Instalación
+## Installation
 
-1. Clonar el repositorio:
+1. Clone the repository:
 ```bash
 git clone https://github.com/staatiic/pia-sistemas.git
 cd pia-sistemas
 ```
 
-2. Crear un entorno virtual (recomendado):
+2. Create a virtual environment (recommended):
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Instalar las dependencias:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Preparación de Datos y Modelos
+## Data and Model Preparation
 
-1. Descargar los datasets necesarios:
-   - Para el dataset de películas (`holanuevo.csv`), descárgalo desde [Hugging Face](https://huggingface.co/datasets/ada-datadruids/full_tmdb_movies_dataset). Este archivo no está incluido en el repositorio debido a su gran tamaño (499MB).
-   - El archivo `albums.csv` está incluido en el repositorio.
+1. Download required datasets:
+   - For the movies dataset (`holanuevo.csv`), download it from [Hugging Face](https://huggingface.co/datasets/ada-datadruids/full_tmdb_movies_dataset). This file is not included in the repository due to its large size (499MB).
+   - The `albums.csv` file is included in the repository.
 
-2. Coloca los archivos CSV en el directorio raíz del proyecto.
+2. Place the CSV files in the project root directory.
 
-3. Entrenar los modelos:
+3. Train the models:
 ```bash
 python train_model.py
 python train_music_model.py
 ```
 
-## Ejecución de la Aplicación
+## Running the Application
 
-1. Iniciar el servidor Flask:
+1. Start the Flask server:
 ```bash
 python app.py
 ```
 
-2. Abrir el navegador web y acceder a:
+2. Open your web browser and navigate to:
 ```
 http://localhost:5000
 ```
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 - **Backend**:
-  - Flask (framework web)
+  - Flask (web framework)
   - scikit-learn (machine learning)
-  - pandas (procesamiento de datos)
-  - numpy (cálculos numéricos)
-  - NLTK (procesamiento de lenguaje natural)
+  - pandas (data processing)
+  - numpy (numerical computations)
+  - NLTK (natural language processing)
 
 - **Frontend**:
   - HTML5
@@ -84,32 +84,32 @@ http://localhost:5000
   - JavaScript
   - Bootstrap
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 pia-sistemas/
-├── app.py                 # Aplicación principal Flask
-├── train_model.py         # Entrenamiento del modelo de películas
-├── train_music_model.py   # Entrenamiento del modelo de música
-├── get_music_data.py      # Obtención de datos musicales
-├── models/                # Modelos entrenados de películas
-├── modelss/              # Modelos entrenados de música
-├── static/               # Archivos estáticos (CSS, JS, imágenes)
-├── templates/            # Plantillas HTML
-├── requirements.txt      # Dependencias del proyecto
-└── README.md            # Este archivo
+├── app.py                 # Main Flask application
+├── train_model.py         # Movie model training
+├── train_music_model.py   # Music model training
+├── get_music_data.py      # Music data retrieval
+├── models/                # Trained movie models
+├── modelss/              # Trained music models
+├── static/               # Static files (CSS, JS, images)
+├── templates/            # HTML templates
+├── requirements.txt      # Project dependencies
+└── README.md            # This file
 ```
 
-## Cómo Funciona
+## How It Works
 
-### Sistema de Películas
-1. Utiliza TF-IDF para vectorizar las descripciones de películas
-2. Implementa KMeans para agrupar películas similares
-3. Calcula similitud de coseno entre películas
-4. Proporciona recomendaciones basadas en contenido y clusters
+### Movie System
+1. Uses TF-IDF to vectorize movie descriptions
+2. Implements KMeans for clustering similar movies
+3. Calculates cosine similarity between movies
+4. Provides recommendations based on content and clusters
 
-### Sistema de Música
-1. Procesa información de álbumes y artistas
-2. Calcula similitud entre álbumes
-3. Genera recomendaciones personalizadas
-4. Muestra información detallada de cada álbum
+### Music System
+1. Processes album and artist information
+2. Calculates similarity between albums
+3. Generates personalized recommendations
+4. Displays detailed information for each album
